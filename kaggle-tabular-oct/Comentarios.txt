@@ -1,0 +1,56 @@
+##Analisis de datos
+
+#train_0 tiene 2 149 381 filas y 61 columnas - > 2Millones
+#train_1 tiene 2 168 774 filas - > 2Millones
+#test tiene 701 143 filas y 55 columnas
+-> 6 datos menos, cuales?
+
+Son7 :
+['game_num',
+ 'event_id',
+ 'event_time',
+ 'player_scoring_next',
+ 'team_scoring_next',
+ 'team_A_scoring_within_10sec',
+ 'team_B_scoring_within_10sec']
+
+Test tiene una columna id, x eso suma 1 elem mas a su lista
+
+
+
+#submission tiene 3 columnas: id q no sirve?, teamA score in 10 seconds, teamB score in 10 seconds
+
+
+
+## Revision de train_dtypes:
+game_num :  nro de juego
+event_id:identificador de juego
+event_time: tiempo
+pos balon: x,y,x
+vel balon: x,y,z
+p0,p1,p2,p3,p4,p5: 6 jugadores : pos, vel, boost? aceleracion momentanea?
+boost_timer de cada jugador
+player_scoring_next: sigte jugador que marcara : int
+team_scoring_next: sgte equipo que marcara
+team_A_scoring_in_10 seg: bool
+team_B_scoring_in_10 seg: bool
+
+## Revision de test_dtypes:
+id ?
+pos balon: x,y,x
+vel balon: x,y,z
+p0,p1,p2,p3,p4,p5: 6 jugadores : pos, vel, boost? aceleracion momentanea?
+boost_timer de cada jugador
+
+Se eliminaron 7: game_num, event_id, event_time, player_scoring_next, team_scoring_next,
+team_A_scoring_in_10, team_B_scoring_in_10
+
+Salidas a obtener:
+id, team_A_scoring_in_10, team_B_scoring_in_10
+
+##
+Las veces que marcan A y B son casi iguales
+
+## Importa que sea del equipo A o equipo B?, juntar data indiferente de que equipo sea
+
+
